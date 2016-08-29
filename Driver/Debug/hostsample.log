@@ -1,0 +1,24 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (F:\Win-Widget-master\Driver\Debug\) contains files shared from another project (asiouac2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  PlayerDlg.cpp
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+f:\win-widget-master\asio sdk\host\sample\playerdlg.cpp(248): warning C4996: 'mkdir': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _mkdir. See online help for details.
+          d:\program files (x86)\microsoft visual studio 12.0\vc\include\direct.h(140) : 参见“mkdir”的声明
+  hostsample.h
+  _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
+  asiolist.cpp
+f:\win-widget-master\asio sdk\host\pc\asiolist.cpp(41): warning C4996: 'wcstombs': This function or variable may be unsafe. Consider using wcstombs_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdlib.h(575) : 参见“wcstombs”的声明
+f:\win-widget-master\asio sdk\host\pc\asiolist.cpp(64): warning C4101: “wData”: 未引用的局部变量
+f:\win-widget-master\asio sdk\host\pc\asiolist.cpp(225): warning C4018: “<”: 有符号/无符号不匹配
+f:\win-widget-master\asio sdk\host\pc\asiolist.cpp(247): warning C4018: “<”: 有符号/无符号不匹配
+  asiodrivers.cpp
+  asio.cpp
+f:\win-widget-master\asio sdk\common\asio.cpp(75): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
+f:\win-widget-master\asio sdk\common\asio.cpp(85): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
+f:\win-widget-master\asio sdk\common\asio.cpp(204): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+          d:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(112) : 参见“strcpy”的声明
+  正在生成代码...
+asio.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
+  hostsample.vcxproj -> F:\Win-Widget-master\Driver\Debug\hostsample.exe

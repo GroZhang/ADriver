@@ -1,0 +1,43 @@
+﻿生成启动时间为 2015/12/5 16:46:04。
+     1>项目“F:\Win-Widget-master\Driver\asiouac2.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"..\ASIO SDK\Common" /I"..\libusbK-dev-kit\includes" /I..\uaclib /Zi /nologo /W3 /WX- /O2 /Ob1 /Oy- /D WIN32 /D NDEBUG /D _WINDOWS /D _CRT_SECURE_NO_WARNINGS /D _VC80_UPGRADE=0x0600 /D _WINDLL /GF /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo".\Release/" /Fd".\Release/vc120.pdb" /Gd /TP /analyze- /errorReport:prompt asiouac2.cpp "..\ASIO SDK\common\combase.cpp" "..\ASIO SDK\common\dllentry.cpp" "..\ASIO SDK\common\register.cpp" wintimer.cpp
+         asiouac2.cpp
+     1>f:\win-widget-master\uaclib\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+     1>asiouac2.cpp(965): warning C4244: “=”: 从“double”转换到“unsigned long”，可能丢失数据
+         combase.cpp
+         dllentry.cpp
+     1>..\ASIO SDK\common\dllentry.cpp(272): warning C4996: 'GetVersionExA': 被声明为已否决
+                 C:\Program Files (x86)\Windows Kits\8.1\Include\um\sysinfoapi.h(433) : 参见“GetVersionExA”的声明
+         register.cpp
+         wintimer.cpp
+     1>f:\win-widget-master\uaclib\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+         正在生成代码...
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1186,5): warning MSB8012: TargetPath(F:\Win-Widget-master\Driver\.\Release\asiouac2.dll) does not match the Linker's OutputFile property value (F:\Win-Widget-master\Driver\Release\xCOREUSBAudio.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1188,5): warning MSB8012: TargetName(asiouac2) does not match the Linker's OutputFile property value (xCOREUSBAudio). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:".\Release/xCOREUSBAudio.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"..\libusbK-dev-kit\bin\lib\x86" /LIBPATH:.\Release odbc32.lib odbccp32.lib winmm.lib libusbK.lib uaclib.lib Setupapi.lib msvcrt.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:".\asiouac2.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\Release/asiouac2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE:NO /IMPLIB:".\Release/asiouac2.lib" /MACHINE:X86 /SAFESEH /DLL .\Release/asiouac2.obj
+         .\Release/combase.obj
+         .\Release/dllentry.obj
+         .\Release/register.obj
+         .\Release/wintimer.obj
+         "F:\Win-Widget-master\Driver\Release\uaclib.lib"
+         uaclib.lib(USBAudioDevice.obj) : 找到 MSIL .netmodule 或使用 /GL 编译的模块；正在使用 /LTCG 重新启动链接；将 /LTCG 添加到链接命令行以改进链接器性能
+     1>.\asiouac2.def(2): warning LNK4017: DESCRIPTION 语句不支持目标平台；已忽略
+     1>.\asiouac2.def(3): warning LNK4017: PROTMODE 语句不支持目标平台；已忽略
+     1>.\asiouac2.def : warning LNK4104: 导出符号“DllGetClassObject”应为 PRIVATE
+     1>.\asiouac2.def : warning LNK4104: 导出符号“DllCanUnloadNow”应为 PRIVATE
+     1>.\asiouac2.def : warning LNK4104: 导出符号“DllRegisterServer”应为 PRIVATE
+     1>.\asiouac2.def : warning LNK4104: 导出符号“DllUnregisterServer”应为 PRIVATE
+            正在创建库 .\Release/asiouac2.lib 和对象 .\Release/asiouac2.exp
+     1>asiouac2.exp : warning LNK4070: .EXP 中的 /OUT:ASIOUAC2.dll 指令与输出文件名“.\Release/xCOREUSBAudio.dll”不同；忽略指令
+     1>LINK : warning LNK4098: 默认库“LIBCMT”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+         正在生成代码
+         已完成代码的生成
+     1>asiouac2.exp : warning LNK4070: .EXP 中的 /OUT:ASIOUAC2.dll 指令与输出文件名“.\Release/xCOREUSBAudio.dll”不同；忽略指令
+         asiouac2.vcxproj -> F:\Win-Widget-master\Driver\.\Release\asiouac2.dll
+     1>已完成生成项目“F:\Win-Widget-master\Driver\asiouac2.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:03.11
