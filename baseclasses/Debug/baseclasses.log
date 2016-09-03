@@ -1,0 +1,41 @@
+﻿  wxutil.cpp
+f:\addriver\adriver\baseclasses\wxutil.cpp(755): warning C4996: 'GetVersionExW': 被声明为已否决
+          c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(442) : 参见“GetVersionExW”的声明
+  wxlist.cpp
+  wxdebug.cpp
+  winutil.cpp
+  winctrl.cpp
+  vtrans.cpp
+  videoctl.cpp
+  transip.cpp
+  transfrm.cpp
+  sysclock.cpp
+  strmctl.cpp
+  source.cpp
+  seekpt.cpp
+  schedule.cpp
+  renbase.cpp
+  refclock.cpp
+  pullpin.cpp
+  pstream.cpp
+  perflog.cpp
+  outputq.cpp
+  正在生成代码...
+  正在编译...
+  mtype.cpp
+  dllsetup.cpp
+  dllentry.cpp
+f:\addriver\adriver\baseclasses\dllentry.cpp(314): warning C4996: 'GetVersionExW': 被声明为已否决
+          c:\program files (x86)\windows kits\8.1\include\um\sysinfoapi.h(442) : 参见“GetVersionExW”的声明
+  ddmm.cpp
+  ctlutil.cpp
+  cprop.cpp
+  combase.cpp
+  arithutil.cpp
+  amvideo.cpp
+  amfilter.cpp
+  amextra.cpp
+  正在生成代码...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1361,5): warning MSB8012: TargetPath(F:\ADDriver\ADriver\baseclasses\Debug\BaseClasses.lib) does not match the Library's OutputFile property value (F:\ADDriver\ADriver\baseclasses\Debug\strmbasd.lib). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1363,5): warning MSB8012: TargetName(BaseClasses) does not match the Library's OutputFile property value (strmbasd). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Lib.OutputFile).
+  baseclasses.vcxproj -> F:\ADDriver\ADriver\baseclasses\Debug\BaseClasses.lib

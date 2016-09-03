@@ -42,8 +42,35 @@
 
 
 #include "USBAudioDevice.h"
+#define DEBUG_TRANCE
 
 
+
+void debugPrintf(const wchar_t *str, ...)
+{
+#ifdef DEBUG_TRANCE
+	wchar_t buf[2048];
+
+	va_list ptr;
+	va_start(ptr, str);
+	vswprintf(buf, str, ptr);
+
+	OutputDebugString(buf);
+#endif
+}
+
+
+USBAudioDevice * USBAudioDevice::GetAudioInstance()
+{
+	if (g_instance == NULL)
+	{
+		g_instance = new USBAudioDevice(true);
+	}
+	return g_instance;
+}
+
+
+#define _ENABLE_TRACE
 USBAudioDevice::USBAudioDevice(bool useInput) : m_fbInfo(), m_dac(NULL), m_adc(NULL), m_feedback(NULL), m_useInput(useInput),
 	m_lastParsedInterface(NULL), m_lastParsedEndpoint(NULL), m_audioClass(0),
 	m_dacEndpoint(NULL), m_adcEndpoint(NULL), m_fbEndpoint(NULL), m_notifyCallback(NULL), m_notifyCallbackContext(NULL), m_isStarted(FALSE)
@@ -323,9 +350,9 @@ bool USBAudioDevice::CheckSampleRate(USBAudioClockSource* clocksrc, int newfreq)
 				//for(int freq = triplets[i].min_freq; freq <= triplets[i].max_freq; freq += triplets[i].res_freq)
 				{
 #ifdef _ENABLE_TRACE
-					debugPrintf(L"ASIOUAC: Supported freq: %d\n", triplets[i].min_freq);
-					debugPrintf(L"ASIOUAC: Supported freq: %d\n", triplets[i].max_freq);
-					debugPrintf(L"ASIOUAC: Supported freq: %d\n", triplets[i].res_freq);
+					//debugPrintf(L"ASIOUAC: Supported freq: %d\n", triplets[i].min_freq);
+					//debugPrintf(L"ASIOUAC: Supported freq: %d\n", triplets[i].max_freq);
+					//debugPrintf(L"ASIOUAC: Supported freq: %d\n", triplets[i].res_freq);
 #endif
 					//if(newfreq == freq)
 						retVal = TRUE;
@@ -612,14 +639,17 @@ bool USBAudioDevice::Stop()
 
 void USBAudioDevice::SetDACCallback(FillDataCallback readDataCb, void* context)
 {
+#ifdef _ENABLE_TRACE
+	debugPrintf(L"DAD CALL BACK :read date cb %d, context :%d \n", readDataCb, context);
+#endif
 	if(m_dac != NULL)
-		m_dac->SetCallback(readDataCb, context);
+		m_dac->SetCallback((FillDataCallback)readDataCb, context);
 }
 
 void USBAudioDevice::SetADCCallback(FillDataCallback writeDataCb, void* context)
 {
 	if(m_adc != NULL)
-		m_adc->SetCallback(writeDataCb, context);
+		m_adc->SetCallback((FillDataCallback)writeDataCb, context);
 }
 
 int USBAudioDevice::GetInputChannelNumber()

@@ -25,22 +25,9 @@ union DESCRIPTORS_UNION
 	USB_ENDPOINT_DESCRIPTOR*		Endpoint;
 };
 
-/*
-struct DeviceID
-{
-	USHORT vid;
-	USHORT pid;
-};
 
-DeviceID deviceID[] = { 
-	{0x16C0, 0x03E8},
-	{0x16C0, 0x05dc}
-};
-
-int deviceIDNum = sizeof(deviceID)/sizeof(DeviceID);
-*/
 #define _DeviceInterfaceGUID "{73F07B04-45F4-2F02-2C9B-4CACE51C0318}"
-//#define _DeviceInterfaceGUID "{D7A12F66-B6C6-065A-6F5B-CDC71EB7C016}"
+
 
 USBDevice::USBDevice() : m_usbDeviceHandle(NULL), m_deviceInfo(NULL), m_errorCode(ERROR_SUCCESS), m_deviceSpeed(HighSpeed), m_deviceMutex(NULL), m_deviceIsConnected(FALSE)
 {
@@ -156,7 +143,7 @@ KUSB_HANDLE USBDevice::FindDevice()
 	}
 
 #ifdef _ENABLE_TRACE
-	debugPrintf(L"ASIOUAC: Looking for device with DeviceInterfaceGUID %s\n", _T(_DeviceInterfaceGUID));
+	debugPrintf(L"ASIOUAC: Looking for device with DeviceInterfaceGUID %s\n", _DeviceInterfaceGUID);
 #endif
 	LstK_MoveReset(DeviceList);
     //

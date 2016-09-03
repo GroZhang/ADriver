@@ -1,9 +1,31 @@
-﻿生成启动时间为 2015/12/5 16:46:04。
-     1>项目“F:\Win-Widget-master\uaclib\uaclib.vcxproj”在节点 2 上(Build 个目标)。
-     1>Lib:
-         uaclib.vcxproj -> F:\Win-Widget-master\Driver\Release\uaclib.lib
-     1>已完成生成项目“F:\Win-Widget-master\uaclib\uaclib.vcxproj”(Build 个目标)的操作。
-
-生成成功。
-
-已用时间 00:00:00.04
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(364,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+audiotask.obj : error LNK2019: 无法解析的外部符号 _UsbK_SetPipePolicy@20，该符号在函数 "protected: virtual bool __thiscall AudioADCTask::BeforeStartInternal(void)" (?BeforeStartInternal@AudioADCTask@@MAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _UsbK_ResetPipe@8，该符号在函数 "public: virtual bool __thiscall AudioTask::BeforeStart(void)" (?BeforeStart@AudioTask@@UAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _UsbK_AbortPipe@8，该符号在函数 "public: virtual bool __thiscall AudioTask::AfterStop(void)" (?AfterStop@AudioTask@@UAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _UsbK_IsoReadPipe@24，该符号在函数 "protected: virtual bool __thiscall AudioADCTask::RWBuffer(struct ISOBuffer *,int)" (?RWBuffer@AudioADCTask@@MAE_NPAUISOBuffer@@H@Z) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _UsbK_IsoWritePipe@24，该符号在函数 "protected: virtual bool __thiscall AudioDACTask::RWBuffer(struct ISOBuffer *,int)" (?RWBuffer@AudioDACTask@@MAE_NPAUISOBuffer@@H@Z) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_Acquire@8，该符号在函数 "public: virtual bool __thiscall AudioTask::BeforeStart(void)" (?BeforeStart@AudioTask@@UAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_Release@4，该符号在函数 "public: virtual bool __thiscall AudioTask::AfterStop(void)" (?AfterStop@AudioTask@@UAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_Init@16，该符号在函数 "public: bool __thiscall USBDevice::OvlInit(void * *,long)" (?OvlInit@USBDevice@@QAE_NPAPAXJ@Z) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_Free@4，该符号在函数 "public: virtual bool __thiscall AudioTask::AfterStop(void)" (?AfterStop@AudioTask@@UAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_Wait@16，该符号在函数 "public: bool __thiscall USBDevice::OvlWait(void *,long,enum _KOVL_WAIT_FLAG,unsigned int *)" (?OvlWait@USBDevice@@QAE_NPAXJW4_KOVL_WAIT_FLAG@@PAI@Z) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_WaitOrCancel@12，该符号在函数 "public: virtual bool __thiscall AudioTask::AfterStop(void)" (?AfterStop@AudioTask@@UAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _OvlK_ReUse@4，该符号在函数 "public: bool __thiscall USBDevice::OvlReUse(void *)" (?OvlReUse@USBDevice@@QAE_NPAX@Z) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _IsoK_Init@12，该符号在函数 "protected: bool __thiscall AudioTask::AllocBuffers(void)" (?AllocBuffers@AudioTask@@IAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _IsoK_Free@4，该符号在函数 "protected: bool __thiscall AudioTask::FreeBuffers(void)" (?FreeBuffers@AudioTask@@IAE_NXZ) 中被引用
+audiotask.obj : error LNK2019: 无法解析的外部符号 _IsoK_SetPackets@8，该符号在函数 "protected: bool __thiscall AudioTask::AllocBuffers(void)" (?AllocBuffers@AudioTask@@IAE_NXZ) 中被引用
+USBAudioDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_ClaimInterface@12，该符号在函数 "protected: bool __thiscall USBAudioDevice::CheckSampleRate(class USBAudioClockSource *,int)" (?CheckSampleRate@USBAudioDevice@@IAE_NPAVUSBAudioClockSource@@H@Z) 中被引用
+USBAudioDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_ReleaseInterface@12，该符号在函数 "protected: bool __thiscall USBAudioDevice::CheckSampleRate(class USBAudioClockSource *,int)" (?CheckSampleRate@USBAudioDevice@@IAE_NPAVUSBAudioClockSource@@H@Z) 中被引用
+USBAudioDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_SetAltInterface@16，该符号在函数 "public: bool __thiscall USBDevice::UsbSetAltInterface(unsigned char,unsigned char)" (?UsbSetAltInterface@USBDevice@@QAE_NEE@Z) 中被引用
+USBAudioDevice.obj : error LNK2001: 无法解析的外部符号 "private: static class USBAudioDevice * USBAudioDevice::g_instance" (?g_instance@USBAudioDevice@@0PAV1@A)
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_Init@8，该符号在函数 "private: void * __thiscall USBDevice::FindDevice(void)" (?FindDevice@USBDevice@@AAEPAXXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_Free@4，该符号在函数 "public: virtual __thiscall USBDevice::~USBDevice(void)" (??1USBDevice@@UAE@XZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_GetDescriptor@28，该符号在函数 "public: virtual bool __thiscall USBDevice::InitDevice(void)" (?InitDevice@USBDevice@@UAE_NXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_ControlTransfer@28，该符号在函数 "protected: bool __thiscall USBDevice::SendUsbControl(int,int,int,int,int,int,unsigned char *,int,unsigned int *)" (?SendUsbControl@USBDevice@@IAE_NHHHHHHPAEHPAI@Z) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _UsbK_QueryDeviceInformation@16，该符号在函数 "public: virtual bool __thiscall USBDevice::InitDevice(void)" (?InitDevice@USBDevice@@UAE_NXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _LstK_Init@8，该符号在函数 "private: void * __thiscall USBDevice::FindDevice(void)" (?FindDevice@USBDevice@@AAEPAXXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _LstK_Free@4，该符号在函数 "private: void * __thiscall USBDevice::FindDevice(void)" (?FindDevice@USBDevice@@AAEPAXXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _LstK_MoveNext@8，该符号在函数 "private: void * __thiscall USBDevice::FindDevice(void)" (?FindDevice@USBDevice@@AAEPAXXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _LstK_MoveReset@4，该符号在函数 "private: void * __thiscall USBDevice::FindDevice(void)" (?FindDevice@USBDevice@@AAEPAXXZ) 中被引用
+UsbDevice.obj : error LNK2019: 无法解析的外部符号 _LstK_Count@8，该符号在函数 "private: void * __thiscall USBDevice::FindDevice(void)" (?FindDevice@USBDevice@@AAEPAXXZ) 中被引用
+..\bin_Win32\uaclib.dll : fatal error LNK1120: 29 个无法解析的外部命令
