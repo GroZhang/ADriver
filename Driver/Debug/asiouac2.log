@@ -1,4 +1,34 @@
 ﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (.\Debug\) contains files shared from another project (hostsample.vcxproj).  This can lead to incorrect clean and rebuild behavior.
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(F:\Win-Widget-master\Driver\.\Debug\asiouac2.dll) does not match the Linker's OutputFile property value (F:\Win-Widget-master\Driver\Debug\xCOREUSBAudio.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+  wintimer.cpp
+f:\addriver\adriver\uaclib\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\addriver\adriver\uaclib\audiotask.h(23): warning C4005: “_ENABLE_TRACE”: 宏重定义
+          命令行参数: 参见前面的“_ENABLE_TRACE”定义
+  register.cpp
+  dllentry.cpp
+..\ASIO SDK\common\dllentry.cpp(272): warning C4996: 'GetVersionExA': 被声明为已否决
+          C:\Program Files (x86)\Windows Kits\8.1\Include\um\sysinfoapi.h(433) : 参见“GetVersionExA”的声明
+  combase.cpp
+  asiouac2.cpp
+f:\addriver\adriver\uaclib\targetver.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+f:\addriver\adriver\uaclib\audiotask.h(23): warning C4005: “_ENABLE_TRACE”: 宏重定义
+          命令行参数: 参见前面的“_ENABLE_TRACE”定义
+asiouac2.cpp(944): warning C4244: “=”: 从“double”转换到“unsigned long”，可能丢失数据
+  正在生成代码...
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(F:\ADDriver\ADriver\Driver\.\Debug\asiouac2.dll) does not match the Linker's OutputFile property value (F:\ADDriver\ADriver\Driver\Debug\xCOREUSBAudio.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(asiouac2) does not match the Linker's OutputFile property value (xCOREUSBAudio). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-  asiouac2.vcxproj -> F:\Win-Widget-master\Driver\.\Debug\asiouac2.dll
+  LINK : 没有找到 .\Debug/xCOREUSBAudio.dll 或上一个增量链接没有生成它；正在执行完全链接
+.\asiouac2.def(2): warning LNK4017: DESCRIPTION 语句不支持目标平台；已忽略
+.\asiouac2.def(3): warning LNK4017: PROTMODE 语句不支持目标平台；已忽略
+.\asiouac2.def : warning LNK4104: 导出符号“DllGetClassObject”应为 PRIVATE
+.\asiouac2.def : warning LNK4104: 导出符号“DllCanUnloadNow”应为 PRIVATE
+.\asiouac2.def : warning LNK4104: 导出符号“DllRegisterServer”应为 PRIVATE
+.\asiouac2.def : warning LNK4104: 导出符号“DllUnregisterServer”应为 PRIVATE
+     正在创建库 .\Debug/asiouac2.lib 和对象 .\Debug/asiouac2.exp
+asiouac2.exp : warning LNK4070: .EXP 中的 /OUT:ASIOUAC2.dll 指令与输出文件名“.\Debug/xCOREUSBAudio.dll”不同；忽略指令
+LINK : warning LNK4098: 默认库“MSVCRTD”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+LINK : warning LNK4098: 默认库“LIBCMTD”与其他库的使用冲突；请使用 /NODEFAULTLIB:library
+uaclib.lib(audiotask.obj) : warning LNK4204: “F:\ADDriver\ADriver\Driver\Debug\vc120.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+uaclib.lib(descriptors.obj) : warning LNK4204: “F:\ADDriver\ADriver\Driver\Debug\vc120.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+uaclib.lib(USBAudioDevice.obj) : warning LNK4204: “F:\ADDriver\ADriver\Driver\Debug\vc120.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+uaclib.lib(UsbDevice.obj) : warning LNK4204: “F:\ADDriver\ADriver\Driver\Debug\vc120.pdb”缺少引用模块的调试信息；正在链接对象，如同没有调试信息一样
+  asiouac2.vcxproj -> F:\ADDriver\ADriver\Driver\.\Debug\asiouac2.dll

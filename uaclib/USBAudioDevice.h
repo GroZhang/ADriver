@@ -95,6 +95,8 @@ protected:
 	USBAudioOutTerminal*		FindOutTerminal(int id);
 
 public:
+	static USBAudioDevice * GetAudioInstance();
+
 	USBAudioDevice(bool useInput);
 	virtual ~USBAudioDevice();
 	virtual bool InitDevice();
@@ -110,7 +112,10 @@ public:
 	bool Stop();
 
 	void SetDACCallback(FillDataCallback readDataCb, void* context);
+
 	void SetADCCallback(FillDataCallback writeDataCb, void* context);
+
+
 	void SetNotifyCallback(NotifyCallback notifyCallback, void* notifyCallbackContext)
 	{
 		m_notifyCallback = notifyCallback;
@@ -150,8 +155,10 @@ private:
 	AudioDAC*			m_dac;
 	AudioADC*			m_adc;
 	AudioFeedback*		m_feedback;
-
+	
 	bool				m_isStarted;
+
+	static USBAudioDevice * g_instance;
 };
 
 #endif //__USBAUDIO_DEVICE_H__

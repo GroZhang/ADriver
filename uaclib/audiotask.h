@@ -20,9 +20,10 @@
 //#include <tchar.h>
 #include <math.h>
 
+//#define _ENABLE_TRACE
 #ifdef _ENABLE_TRACE
 //extern void debugPrintf(const _TCHAR *szFormat, ...);
-extern void debugPrintf(const _TCHAR *szFormat, ...);
+extern void debugPrintf(const wchar_t *szFormat, ...);
 #endif
 
 #define packetPerTransferDAC	16
@@ -261,6 +262,7 @@ public:
 	}
 
 
+
 	bool Start()
 	{
 #ifdef _ENABLE_TRACE
@@ -424,7 +426,7 @@ protected:
 #endif
 
 public:
-	AudioTask(int packetPerTransfer, _TCHAR* taskName) : m_device(NULL), 
+	AudioTask(int packetPerTransfer, wchar_t* taskName) : m_device(NULL), 
 		m_pipeId(0),
 		m_maximumPacketSize(0),
 		m_interval(0),
@@ -449,7 +451,7 @@ public:
 #endif
 	{
 		memset(m_isoBuffers, 0, sizeof(m_isoBuffers));
-		_tcscpy_s(m_taskName, taskName);
+		wcscpy_s(m_taskName, taskName);
 	}
 
 	virtual ~AudioTask()
@@ -460,7 +462,7 @@ public:
 	bool BeforeStart();
 	bool AfterStop();
 	bool Work(volatile TaskState& taskState);
-	_TCHAR* TaskName() 
+	wchar_t* TaskName()
 	{
 		return m_taskName;
 	}
@@ -524,7 +526,7 @@ protected:
 #endif
 
 public:
-	AudioDACTask() : AudioTask(packetPerTransferDAC, _T("Audio DAC task")), m_feedbackInfo(NULL), m_readDataCb(NULL), m_readDataCbContext(NULL)
+	AudioDACTask() : AudioTask(packetPerTransferDAC, L"Audio DAC task"), m_feedbackInfo(NULL), m_readDataCb(NULL), m_readDataCbContext(NULL)
 	{
 #ifdef _ENABLE_TRACE
 		fopen_s(&m_dumpFile, "c:\\dac_dump.bin", "wb");
@@ -583,7 +585,7 @@ protected:
 #endif
 
 public:
-	AudioADCTask() : AudioTask(packetPerTransferADC, _T("Audio ADC task")), m_feedbackInfo(NULL), m_writeDataCb(NULL), m_writeDataCbContext(NULL)
+	AudioADCTask() : AudioTask(packetPerTransferADC, L"Audio ADC task"), m_feedbackInfo(NULL), m_writeDataCb(NULL), m_writeDataCbContext(NULL)
 	{}
 
 	~AudioADCTask()
@@ -625,7 +627,7 @@ protected:
 	virtual bool RWBuffer(ISOBuffer* buffer, int len);
 	virtual void ProcessBuffer(ISOBuffer* buffer);
 public:
-	AudioFeedbackTask() : AudioTask(packetPerTransferFb, _T("Audio feedback task")), m_feedbackInfo(NULL)
+	AudioFeedbackTask() : AudioTask(packetPerTransferFb, L"Audio feedback task"), m_feedbackInfo(NULL)
 	{}
 
 	~AudioFeedbackTask()
